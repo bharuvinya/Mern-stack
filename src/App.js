@@ -46,12 +46,11 @@ setError(error)
   useEffect(()=>{Fetchdata()},[])
   return (
     <>
-    <div className='box'>
+
       <div className='box-con'>
     <InfiniteScroll dataLength={data.length} next={Fetchdata} hasMore={hasMore} loader={<p>Loading...</p>} endMessage={<p>No more data</p>}>
     <Card data={data}/>
     </InfiniteScroll>
-    </div>
     </div>
     </>
      
