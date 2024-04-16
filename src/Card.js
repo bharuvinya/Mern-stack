@@ -34,15 +34,16 @@ return(
 <BsArrowRightCircleFill onClick={nextMove} className='arrow right'/>
    
     </div>
-    <p></p>
     <div className='content'>
     <div className='new-p'>
        
     <span>{i.village_name},</span>
     <span>{i.mandal_name},</span>
     <h3>{i.district_name}(dt)</h3>
-     <span>{i.total_land_size_in_acres.acres?i.total_land_size_in_acres.acres+" Acres  ":null}</span> 
-     <span>{i.total_land_size_in_acres.guntas?i.total_land_size_in_acres.guntas+" Guntas":null}</span> 
+     <span><b>{i.total_land_size_in_acres.acres?i.total_land_size_in_acres.acres+" Acres  ":null}</b></span> 
+     <span><b>{i.total_land_size_in_acres.guntas?i.total_land_size_in_acres.guntas+" Guntas":null}</b></span>
+     <b>.  </b><span>&#8377;{i.total_land_size_in_acres.acres && i.price_per_acre_crore.crore!==0.0?i.price_per_acre_crore.crore+(i.price_per_acre_crore.lakh*0.01)+" crores per acre":i.total_land_size_in_acres.acres && i.total_land_size_in_acres.guntas && i.price_per_acre_crore.crore===0.0?i.price_per_acre_crore.lakh+" lakh per acre":i.total_land_size_in_acres.acres===0.0 && i.total_price<100?Math.round(i.total_price*100)/100 +" lakh per acre":i.total_price>100?Math.round((i.total_price*0.01)*100)/100 +" crore per acre":null}</span>
+
 
 
     </div>
